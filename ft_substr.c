@@ -11,27 +11,25 @@
 /* ************************************************************************** */
 
 #include<stdlib.h>
-#include<stddef.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*dest;
-  unsigned int  i;
-  unsigned int total;
+char	*dest;
+unsigned int 	i;
+unsigned int	total;
 
-	start = 0;
-  i = 0;
-  total = *s;
+i = 0;
+total = *s;
 
-	if (len != 0 && s[i] && start < total)
+if (len != 0 && s[i] && start < total)
+{
+	dest = malloc(sizeof(char) * (len) + sizeof(char));
+	while (i < len && s[start + i])
 	{
-    dest = malloc(sizeof(char) * (len) + sizeof(char));
-    while (start < len && (*(s + i) != '\0'))
-    {
-      start++;
-      i++;
-    }
-      return (dest);
+		dest[i] = s[start + i];
+		i++;
+	}
+	return (dest);
 	}  
   else
     return (NULL);
@@ -43,10 +41,10 @@ int main()
 {
     char src[] = "help me dude";
  
-    int start = 2;
-    int end = 4;
+    int star = 5;
+    int end = 6;
  
-    char* dest = ft_substr(src, start, end);
+    char* dest = ft_substr(src, star, end);
  
     printf("%s\n", dest);
  
