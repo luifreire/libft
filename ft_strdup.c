@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 11:30:27 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 12:17:31 by luisanto         ###   ########.fr       */
+/*   Created: 2023/08/07 12:22:18 by luisanto          #+#    #+#             */
+/*   Updated: 2023/08/07 13:16:35 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,48 +25,34 @@ int	ft_strlen(char const *str)
 	return (count);
 }
 
-char  *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strdup(char *src)
 {
-  char  *dest;
-  int i;
-  int s_s2;
+	char	*new;
+	int		count;
 
-  i = 0;
-  s_s2 = 0;
-  dest = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1); 
-  if (!dest)
-    return (NULL);
-	while (i < ft_strlen(s1))
-  {
-		dest[i] = s1[i];
-    i++;
-  }
-	while (s_s2 < ft_strlen(s2))
-	{
-		dest[i] = s2[s_s2];
-		i++;
-    s_s2++;
-  }
-  dest[i] = '\0';
-  return (dest);
+	count = 0;
+	new = (char*)malloc(sizeof(char) * ft_strlen(src) + 1);
+	if (!(new))
+		return (NULL);
+	while (*src)
+		new[count++] = *src++;
+	new[count] = '\0';
+	return (new);
 }
 /* 
 #include<stdio.h>
+#include<string.h>
 
-int main()
+int	main(int argc, char **argv)
 {
-  char  first[] = "hey now";
-  char  second[] = "this is";
-
-  char* dest = ft_strjoin(first, second);
-
-  printf("%s\n", dest);
-
-  return 0;
-}
-
-
-  printf("%s\n", dest);
-
-  return (0);
+	char *mine;
+	char *theirs;
+	
+	if (argc == 2)
+	{
+		mine = ft_strdup(argv[1]);
+		theirs = strdup(argv[1]);
+		printf(":%s:\n:%s:\n", mine, theirs);
+	}
+	return (0);
 } */

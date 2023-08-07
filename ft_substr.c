@@ -6,7 +6,7 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 14:38:26 by luisanto          #+#    #+#             */
-/*   Updated: 2023/07/20 15:10:46 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/07 12:16:08 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,26 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-char	*dest;
-unsigned int 	i;
-unsigned int	total;
+	char		*dest;
+	unsigned int	i;
+	unsigned int	total;
 
-i = 0;
-total = *s;
-
-if (len != 0 && s[i] && start < total)
-{
-	dest = malloc(sizeof(char) * (len) + sizeof(char));
-	while (i < len && s[start + i])
+	i = 0;
+	total = *s;
+	if (len != 0 && s[i] && start < total)
 	{
-		dest[i] = s[start + i];
-		i++;
+		dest = malloc(sizeof(char) * (len) + sizeof(char));
+		while (i < len && s[start + i])
+		{
+			dest[i] = s[start + i];
+			i++;
+		}
+		return (dest);
 	}
-	return (dest);
-	}  
-  else
-    return (NULL);
+	else
+		return (NULL);
 }
-
+/* 
 #include<stdio.h>
 
 int main()
@@ -49,4 +48,4 @@ int main()
     printf("%s\n", dest);
  
     return 0;
-}
+} */
