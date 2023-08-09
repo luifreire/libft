@@ -6,7 +6,7 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 14:38:26 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 12:16:08 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/09 13:56:15 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*dest;
-	unsigned int	i;
-	unsigned int	total;
+	char				*dest;
+	unsigned int		i;
+	unsigned int		total;
 
 	i = 0;
 	total = *s;

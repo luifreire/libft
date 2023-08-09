@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 14:39:46 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/09 13:34:40 by luisanto         ###   ########.fr       */
+/*   Created: 2023/08/09 13:11:38 by luisanto          #+#    #+#             */
+/*   Updated: 2023/08/09 13:30:57 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include<stdlib.h>
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	else
-		return (c);
+	unsigned char	*str;
+	size_t	count;
+	
+	str = (char *)malloc(sizeof(char) * (n + 1));
+	count = 0;
+	if (!(str))
+		return (NULL);
+	while (count < n)
+	{
+		if (str[count] == s[count])
+			return(str);
+
+		if ((unsigned char)str[count] == (unsigned char)c)
+			return ((char *)s + count);
+		count++;
+	}
+	return (NULL);
 }

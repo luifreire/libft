@@ -6,7 +6,7 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 11:30:27 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 12:17:31 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/09 13:59:09 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,32 +25,32 @@ int	ft_strlen(char const *str)
 	return (count);
 }
 
-char  *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-  char  *dest;
-  int i;
-  int s_s2;
+	char	*dest;
+	int		i;
+	int		s_s2;
 
-  i = 0;
-  s_s2 = 0;
-  dest = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1); 
-  if (!dest)
-    return (NULL);
+	i = 0;
+	s_s2 = 0;
+	dest = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!dest)
+		return (NULL);
 	while (i < ft_strlen(s1))
-  {
+	{
 		dest[i] = s1[i];
-    i++;
-  }
+		i++;
+	}
 	while (s_s2 < ft_strlen(s2))
 	{
 		dest[i] = s2[s_s2];
 		i++;
-    s_s2++;
-  }
-  dest[i] = '\0';
-  return (dest);
+		s_s2++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
-/* 
+/*
 #include<stdio.h>
 
 int main()

@@ -6,9 +6,16 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 14:24:44 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 14:25:20 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/09 15:41:14 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<unistd.h>
+
+void		ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
 
 void	ft_putstr_fd(char *s, int fd)
 {

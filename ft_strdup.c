@@ -6,7 +6,7 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:22:18 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 13:16:35 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/09 13:55:33 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(char *src)
 	int		count;
 
 	count = 0;
-	new = (char*)malloc(sizeof(char) * ft_strlen(src) + 1);
+	new = (char *)malloc(sizeof(char) * ft_strlen(src) + 1);
 	if (!(new))
 		return (NULL);
 	while (*src)

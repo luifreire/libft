@@ -6,18 +6,18 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:51:25 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 13:52:42 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/09 14:41:48 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
 
-static size_t	get_digits(int n)
+static size_t	gather_digits(int n)
 {
 	size_t	i;
 
 	i = 1;
-	while (n /= 10)
+	while ((n /= 10))
 		i++;
 	return (i);
 }
@@ -26,10 +26,10 @@ char	*ft_itoa(int n)
 {
 	char	*res;
 	size_t	digits;
-	long int	num;
+	long int		num;
 
 	num = n;
-	digits = get_digits(n);
+	digits = gather_digits(n);
 	res = (char *)malloc(sizeof(char) * (digits + 1));
 	if (n < 0)
 	{
@@ -47,4 +47,19 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		*(res + 0) = '-';
 	return (res);
+}
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int	main(int argc, char **argv)
+{
+	int mine;
+	
+	if (argc == 2)
+	{
+		mine = (argv[1]);
+		printf("mine: %s\n", ft_itoa(mine));
+	}
+	return (0);
 }

@@ -6,25 +6,41 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 11:34:07 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 13:39:29 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/09 13:02:03 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+
+char		*ft_strtrim(char const *s)
 {
-	char	*s2;
-	int	start;
-	int	end;
-
-	start = 0;
-	end = ft_strlen(s1) - 1;
-	s2 = (char*)malloc(sizeof(char) *ft_strlen(s1) + 1);
-	if (!(s2))
+	
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
+	char			*str;
+	
+	i = 0;
+	k = 0;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		i++;
+	if (s[i] == '\0')
+		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), ""));
+	
+	j = ft_strlen(s) - 1;
+	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+		j--;
+	
+	str = (char *)malloc(sizeof(char) * (j - i + 2));
+	if (str == NULL)
 		return (NULL);
-	while (s1[start] == set[start])
+	
+	while (k < j - i + 1)
 	{
-		
-	}	
+		str[k] = s[i + k];
+		k++;
+	}
+	str[k] = '\0';
+	return (str);
 }
