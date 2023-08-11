@@ -6,7 +6,7 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:48:28 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/09 14:30:36 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/11 13:28:34 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
- 
 
-
- 
+/*  
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -35,4 +33,4 @@ int	main(int argc, char **argv)
 		printf("mine: %d | theirs: %d\n", mine, theirs);
 	}
 	return (0);
-}
+} */

@@ -6,27 +6,23 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 14:24:44 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/09 15:41:14 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:03:19 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
-
-void		ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	count;
 
-	i = 0;
+	count = 0;
 	if (!s)
 		return ;
-	while (s[i])
+	while (s[count])
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		ft_putchar_fd(s[count], fd);
+		count++;
 	}
 }

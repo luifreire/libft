@@ -6,7 +6,7 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:51:25 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/09 14:41:48 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/11 14:57:00 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_itoa(int n)
 {
 	char	*res;
 	size_t	digits;
-	long int		num;
+	long int	num;
 
 	num = n;
 	digits = gather_digits(n);
@@ -49,6 +49,7 @@ char	*ft_itoa(int n)
 	return (res);
 }
 
+/* 
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -62,4 +63,4 @@ int	main(int argc, char **argv)
 		printf("mine: %s\n", ft_itoa(mine));
 	}
 	return (0);
-}
+} */

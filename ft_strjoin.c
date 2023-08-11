@@ -6,24 +6,12 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 11:30:27 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/09 13:59:09 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/11 13:30:30 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
-
-int	ft_strlen(char const *str)
-{
-	int	count;
-
-	count = 0;
-	while (*str != '\0')
-	{
-		count++;
-		str++;
-	}
-	return (count);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

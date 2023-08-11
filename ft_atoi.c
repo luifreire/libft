@@ -6,7 +6,7 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 11:41:06 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/07 12:12:10 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/11 13:28:44 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
+
 /* 
 #include<stdio.h>
 #include<stdlib.h>

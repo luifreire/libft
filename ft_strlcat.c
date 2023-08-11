@@ -6,24 +6,12 @@
 /*   By: luisanto <luisanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 14:33:57 by luisanto          #+#    #+#             */
-/*   Updated: 2023/08/09 15:31:25 by luisanto         ###   ########.fr       */
+/*   Updated: 2023/08/11 13:30:46 by luisanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
-
-int	ft_strlen(char const *str)
-{
-	int	count;
-
-	count = 0;
-	while (*str != '\0')
-	{
-		count++;
-		str++;
-	}
-	return (count);
-}
+#include "libft.h"
 
 size_t	strlcat(char *dst, const char *src, size_t size)
 {
@@ -44,6 +32,7 @@ size_t	strlcat(char *dst, const char *src, size_t size)
 	return (c_dst + ft_strlen(src));
 }
 
+/* 
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -59,4 +48,4 @@ int	main(int argc, char **argv)
 		printf("mine: %s | theirs: %s\n", ft_strlcat(mine), strlcat(theirs));
 	}
 	return (0);
-}
+} */
